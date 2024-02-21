@@ -32,7 +32,7 @@ if (( $+commands[eza] )); then
   if [[ "$enable_autocd" == "1" ]]; then
     # Function for cd auto list directories
     →auto-eza() { command eza $eza_params; }
-    [[ $chpwd_functions[(r)→auto-eza] == →auto-eza ]] || chpwd_functions=( →auto-eza $chpwd_functions )
+    [[ $chpwd_functions[(r)→auto-eza] == →auto-eza ]] || chpwd_functions=( →auto-eza $chpwd_functions ) 2>/dev/null
   fi
 else
   print "Please install eza before using this plugin." >&2
